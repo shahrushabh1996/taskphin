@@ -1,0 +1,11 @@
+{
+  "MOVIE_CREATED": "Movie created successfully",
+  "MOVIE_NOT_FOUND": "Movie not found",
+  "MOVIE_UPDATED": "Movie updated successfully",
+  "MOVIE_DELETED": "Movie deleted successfully",
+  "MOVIE_FETCHED": "Movies fetched successfully",
+  "MOVIE_CREATION_FAILED": "Failed to Create Movie",
+  "MOVIE_UPDATION_FAILED": "Failed to Update Movie",
+  "MOVIE_DELETION_FAILED": "Failed to Delete Movie",
+  "MOVIE_FETCHING_FAILED": "Failed to Get Movies"
+}

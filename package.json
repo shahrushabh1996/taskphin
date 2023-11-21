@@ -1,0 +1,29 @@
+{
+  "name": "taskphin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "node-cache": "^5.1.2",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahrushabh1996/taskphin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahrushabh1996/taskphin/issues"
+  },
+  "homepage": "https://github.com/shahrushabh1996/taskphin#readme"
+}

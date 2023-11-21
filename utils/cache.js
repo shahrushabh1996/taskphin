@@ -5,10 +5,12 @@ function set(key, value, expiry) {
   if (!expiry) return myCache.set(key, value);
 
   if (_isSecTimestamp(expiry)) return myCache.set(key, value, _convertSecTimestamptoMs(expiry));
+  
   return myCache.set(key, value, expiry);
 }
 
 function get(key) {
+  debugger;
   return myCache.get(key);
 }
 
@@ -34,13 +36,3 @@ module.exports = {
   set,
   get
 };
-
-// (async () => {
-//   // console.log(getTTL(1700224125, Math.floor(Date.now() / 1000)));
-//   console.log(set("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUnVzaGFiaCBTaGFoIiwiaWF0IjoxNzAwMjIwOTE4LCJleHAiOjE3MDAyMjQ1MTh9.9BZHFNa0Vu5zffqiRrwnu6XiKDvk_z757PIF_wG8-R1", 0, Date.now() + 5000))
-//   console.log(get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUnVzaGFiaCBTaGFoIiwiaWF0IjoxNzAwMjIwOTE4LCJleHAiOjE3MDAyMjQ1MTh9.9BZHFNa0Vu5zffqiRrwnu6XiKDvk_z757PIF_wG8-R1"))
-
-//   setTimeout(() => {
-//     console.log(get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUnVzaGFiaCBTaGFoIiwiaWF0IjoxNzAwMjIwOTE4LCJleHAiOjE3MDAyMjQ1MTh9.9BZHFNa0Vu5zffqiRrwnu6XiKDvk_z757PIF_wG8-R1"))
-//   }, 6000)
-// })()

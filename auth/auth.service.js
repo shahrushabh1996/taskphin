@@ -1,7 +1,7 @@
 const { ValidationError } = require('sequelize');
 const auth = require('./auth.repository');
 const { isValidEmail } = require("../utils/validation");
-const { hash, compare, generateToken, verifyToken } = require("../utils/auth");
+const { hash, compare, generateToken, verifyToken, convertToSmallHash, removeBearer } = require("../utils/auth");
 const { set } = require("../utils/cache");
 const { isUniqueKeyViolation } = require('../utils/sequelize');
 const {
@@ -87,7 +87,7 @@ async function logout(token) {
 
     const { exp } = tokenData || {};
 
-    if (set(token, 1, exp)) {
+    if (set(convertToSmallHash(removeBearer(token)), 1, exp)) {
       return {
         code: 200,
         message: AUTH_LOGGED_OUT

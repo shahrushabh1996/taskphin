@@ -2,6 +2,7 @@ const { verifyToken } = require('../utils/auth');
 
 function verifyAuthToken(token = '') {
   try {
+
     if (token === '') return false;
     
     const userData = verifyToken(token);
